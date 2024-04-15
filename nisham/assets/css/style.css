@@ -104,6 +104,16 @@ p {
     text-transform: uppercase;
 }
 
+.section1-title {
+    margin-bottom: 70px;
+}
+
+.section1-title h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 .form-control {
     background-color: transparent;
     border: 1px solid #999;
@@ -581,16 +591,18 @@ p {
 #about .div-img-bg {
     padding-bottom: 30px;
     border: 20px solid #b8a07e;
+    width: 100%;
+    height: 93%;
 }
 
 #about .div-img-bg .about-img img {
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 10%;
     box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-    margin-top: -60px;
-    margin-left: 40px;
-    -o-object-fit: cover;
-    object-fit: cover;
+    margin-top: 0px;
+    margin-left: 0px;
+    -o-object-fit: fill;
+    object-fit: fill;
 }
 
 #about .about-descr .p-heading {
@@ -614,7 +626,7 @@ p {
 --------------------------------------------------------------*/
 
 #services {
-    background: #f7f7f7;
+    background: white;
     position: relative;
     padding-bottom: 80px;
 }
@@ -897,6 +909,7 @@ p {
 
 .contact-details li {
     padding-bottom: 10px;
+    text-align: left;
 }
 
 #contact input,
