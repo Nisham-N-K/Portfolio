@@ -12,7 +12,8 @@
 
     function _interopNamespaceDefault(e) {
         const n = Object.create(null, {
-            [Symbol.toStringTag]: { value: 'Module' } });
+            [Symbol.toStringTag]: { value: 'Module' }
+        });
         if (e) {
             for (const k in e) {
                 if (k !== 'default') {
