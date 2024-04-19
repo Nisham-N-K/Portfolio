@@ -179,34 +179,42 @@
     /**
      * Testimonials slider
      */
-    new Swiper('.services-slider', {
-        speed: 600,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20
+    // swiper-init.js
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Swiper slider
+        new Swiper('.services-slider', {
+            speed: 600, // Transition speed in milliseconds
+            loop: true, // Enable loop mode
+            autoplay: {
+                delay: 5000, // Delay between transitions in milliseconds
+                disableOnInteraction: false // Allow autoplay to continue even when user interacts with slider
             },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
+            slidesPerView: 'auto', // Number of slides per view (can be 'auto' to fit as many slides as possible in the container)
+            pagination: {
+                el: '.swiper-pagination', // Pagination container element
+                type: 'bullets', // Pagination type ('bullets', 'fraction', 'progressbar', or 'custom')
+                clickable: true // Enable clickable pagination bullets
             },
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 20
+            breakpoints: {
+                // Define breakpoints for responsive behavior
+                320: {
+                    slidesPerView: 1, // Number of slides per view on screens less than 320px wide
+                    spaceBetween: 20 // Space between slides in pixels
+                },
+                768: {
+                    slidesPerView: 2, // Number of slides per view on screens between 320px and 768px wide
+                    spaceBetween: 20 // Space between slides in pixels
+                },
+                1200: {
+                    slidesPerView: 4, // Number of slides per view on screens wider than 768px
+                    spaceBetween: 20 // Space between slides in pixels
+                }
             }
-        }
+        });
     });
+
+
 
     /**
      * Porfolio isotope and filter
