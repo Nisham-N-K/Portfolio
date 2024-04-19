@@ -45,6 +45,7 @@
     /**
      * Navbar links active state on scroll
      */
+
     let navbarlinks = select('#navbar .scrollto', true)
     const navbarlinksActive = () => {
         let position = window.scrollY + 200
@@ -111,6 +112,17 @@
         window.addEventListener('load', toggleBacktotop)
         onscroll(document, toggleBacktotop)
     }
+
+
+    // <--Show success message after 2 seconds---->
+
+    document.querySelector('.cv-download-link').addEventListener('click', function() {
+
+        setTimeout(function() {
+            document.getElementById('download-success-message').style.display = 'block';
+        }, 2000);
+    });
+
 
     /**
      * Mobile nav toggle
